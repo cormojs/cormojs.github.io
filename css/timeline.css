@@ -15,12 +15,12 @@
     cursor: default;
 }
 
-#main {
+#columns {
     overflow: hidden;
     margin-right: -10px;
 }
 
-#main .app {
+#columns .app {
     float: left;
     width: 250px;
     margin-right: 10px;

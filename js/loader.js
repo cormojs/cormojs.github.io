@@ -22,5 +22,16 @@ window.onload = function(){
     }
   });
 
-  new Vue({ el: "#main" });
+  new Vue({
+    el: "#main",
+    data: {
+      columns: [ { id: 0 } ]
+    },
+    methods: {
+      addColumn: function() {
+        this.columns.push({ id: this.columns.length });
+        console.log(this.columns);
+      }
+    }
+  });
 };
