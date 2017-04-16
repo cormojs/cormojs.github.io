@@ -16,7 +16,7 @@ window.onload = function(){
             console.log("error: " + err);
             console.log("response: " + res.ok);
 
-            this.toots = res.body.reverse();
+            this.toots = res.body.sort((t1, t2) => t2.id - t1.id);
           });
       }
     }
