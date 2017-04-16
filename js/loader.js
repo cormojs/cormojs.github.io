@@ -2,9 +2,9 @@ window.onload = function(){
   let req = window.superagent;
 
   Vue.component("app", {
-	  props: [ "instance" ],
+	  props: [ ],
     data: function() {
-  		return { toots: this.toots };
+  		return { toots: this.toots, instance: this.instance };
     },
     template: "#app-template",
     methods: {

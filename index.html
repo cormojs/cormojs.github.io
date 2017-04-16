@@ -38,10 +38,11 @@
          </div>
          </div>
         </script>
+        <h1>指定したインスタンスのローカルTLを見るやつ</h1>
         <div id="main">
             <button id="addColumnButton" @click="addColumn">Add new timeline</button>
             <div id="columns">
-                <app v-for="c in columns" :key="c.id" v-bind:toots="[]"></app>
+                <app v-for="c in columns" :key="c.id" :toots="[]" :instance="''"></app>
             </div>
         </div>
 
