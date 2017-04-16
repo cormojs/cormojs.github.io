@@ -1,0 +1,27 @@
+.status__content {
+    font-size: 15px;
+    line-height: 20px;
+    word-wrap: break-word;
+    overflow: hidden;
+    white-space: pre-wrap;
+}
+
+.status {
+    padding: 8px 10px;
+    padding-left: 68px;
+    position: relative;
+    min-height: 48px;
+    border-bottom: 1px solid #393f4f;
+    cursor: default;
+}
+
+#main {
+    overflow: hidden;
+    margin-right: -10px;
+}
+
+#main .app {
+    float: left;
+    width: 250px;
+    margin-right: 10px;
+}
