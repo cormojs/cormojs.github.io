@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+        <script type="text/javascript" src="/js/loader.js"></script>
+        <link rel="stylesheet" type="text/css" href="/css/timeline.css">
+        <script type="text/javascript" src="https://wzrd.in/standalone/superagent@latest"></script>
+        <script type="text/javascript" src="https://unpkg.com/vue"></script>
+
+        <title>指定したインスタンスのローカルTLを見るやつ by cormojs</title>
+
+
+
+
+    </head>
+
+    <body>
+        <script type="text/x-template" id="app-template">
+         <div class="app">
+         <input v-model="instance" placeholder="foobar.com">
+         <button @click="fetch">fetch</button>
+         <div class="view">
+         <div v-for="toot in toots" class="status">
+         <div class="status__header" style="font-size: 15px;">
+         <a v-bind:href="toot.account.url" class="status__display-name" style="display: block; max-width: 100%; padding-right: 25px;">
+         <div class="status__avatar" style="position: absolute; left: 10px; top: 10px; width: 48px; height: 48px;">
+         <div class="avatar" :style="{ 'width' : '48px', 'height' : '48px', 'background-size' : '48px 48px', 'background-image' : 'url(' + toot.account.avatar + ')' }"></div>
+         </div>
+         <span class="display-name" style="display: block; max-width: 100%; overflow: hidden; white-space: nowrap; text-overflow: ellipsis;">
+         <strong style="font-weight: 500;">{{ toot.account.display_name }}</strong>
+         <span style="font-size: 14px;">@{{ toot.account.username }}</span>
+         </span>
+         </a>
+         </div>
+         <div class="status__content" v-html="toot.content"></div>
+         </div>
+         </div>
+         </div>
+        </script>
+        <div id="main">
+            <app v-bind:toots="[]">
+            </app>
+        </div>
+
+    </body>
+
+</html>
+
